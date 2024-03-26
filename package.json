@@ -9,6 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky",
+    "commit": "commit",
     "lint:fix": "pnpm eslint:fix && pnpm stylelint:fix && pnpm prettier:fix",
     "check-types": "tsc --noemit",
     "eslint": "eslint --cache --ext .ts,.tsx,.js,.jsx src/ --ignore-path .gitignore .",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/prompt-cli": "^19.2.0",
     "@commitlint/types": "^19.0.3",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",

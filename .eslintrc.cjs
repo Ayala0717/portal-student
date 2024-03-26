@@ -19,6 +19,8 @@ module.exports = {
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
     project: './tsconfig.eslint.json',
     ecmaVersion: 12
   },
@@ -32,6 +34,14 @@ module.exports = {
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/react-in-jsx-scope': 'off',
+    'react/boolean-prop-naming': [
+      'error',
+      {
+        rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+',
+        message:
+          'It is better if your prop ({{ propName }}) matches this pattern: ({{ pattern }})'
+      }
+    ],
     //import
     'import/order': 'error',
     'import/first': 'error',

@@ -42,6 +42,34 @@ module.exports = {
           'It is better if your prop ({{ propName }}) matches this pattern: ({{ pattern }})'
       }
     ],
+    'react/require-default-props': ['warn', { functions: 'defaultArguments' }],
+    'react/forbid-dom-props': ['error'],
+    'react/forbid-elements': ['warn'],
+    'react/hook-use-state': ['error'],
+    'react/jsx-boolean-value': ['warn'],
+    'react/jsx-fragments': ['warn', 'syntax'],
+    'react/jsx-handler-names': ['warn', { checkLocalVariables: true }],
+    'react/jsx-key': ['error', { warnOnDuplicates: true }],
+    'react/jsx-no-duplicate-props': ['error'],
+    'react/jsx-no-leaked-render': ['error', { validStrategies: ['coerce'] }],
+    'react/jsx-no-literals': ['warn'],
+    'react/jsx-no-target-blank': ['warn'],
+    'react/jsx-no-useless-fragment': ['error'],
+    'react/jsx-pascal-case': ['error'],
+    'react/jsx-wrap-multilines': ['error'],
+    'react/no-array-index-key': ['warn'],
+    'react/require-optimization': ['error'],
+    'react/self-closing-comp': ['warn'],
+    'react/no-object-type-as-default-prop': ['warn'],
+    'react/style-prop-object': ['warn'],
+    'react/jsx-sort-props': [
+      'warn',
+      { callbacksLast: true, shorthandFirst: true, reservedFirst: true }
+    ],
+    'react/jsx-closing-bracket-location': [
+      'warn',
+      { selfClosing: 'tag-aligned', nonEmpty: 'after-props' }
+    ],
     //import
     'import/order': 'error',
     'import/first': 'error',
@@ -123,6 +151,7 @@ module.exports = {
     'require-await': 'off',
     'no-return-assign': 'off',
     'operator-linebreak': 'off',
+    'no-implicit-coercion': 'error',
     // unicorns
     'unicorn/error-message': 'error',
     'unicorn/escape-case': 'error',
@@ -168,7 +197,19 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/explicit-function-return-type': 0,
-    '@typescript-eslint/space-before-function-paren': 0
+    '@typescript-eslint/space-before-function-paren': 0,
+    '@typescript-eslint/member-ordering': [
+      'error',
+      {
+        default: {
+          optionalityOrder: 'required-first',
+          memberTypes: ['method', 'field'],
+          order: 'alphabetically'
+        },
+        interfaces: ['field', 'method', 'constructor', 'signature'],
+        typeLiterals: ['field', 'method', 'constructor', 'signature']
+      }
+    ]
   },
   settings: {
     'import/parsers': {

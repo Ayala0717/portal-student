@@ -11,7 +11,7 @@
     "prepare": "husky install",
     "lint:fix": "pnpm eslint:fix && pnpm stylelint:fix && pnpm prettier:fix",
     "check-types": "tsc --noemit",
-    "eslint": "eslint --cache --ext .ts,.tsx,.js,.jsx --ignore-path .gitignore .",
+    "eslint": "eslint --cache --ext .ts,.tsx,.js,.jsx src/ --ignore-path .gitignore .",
     "eslint:fix": "pnpm eslint --fix",
     "stylelint": "stylelint --cache src/**/*.css",
     "stylelint:fix": "pnpm stylelint --fix",

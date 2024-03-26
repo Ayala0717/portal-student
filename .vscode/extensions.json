@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "Gruntfuggly.todo-tree",
+    "bradlc.vscode-tailwindcss",
+    "YoavBls.pretty-ts-errors",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "usernamehw.errorlens",
+    "lokalise.i18n-ally",
+    "kisstkondoros.vscode-gutter-preview",
+    "dsznajder.es7-react-js-snippets"
+  ]
+}

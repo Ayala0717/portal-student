@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sourceLanguage": "es",
+  "todo-tree.highlights.customHighlight": {
+    "[ ]": {
+      "background": "#ff000080"
+    },
+    "[x]": {
+      "background": "#5df25d6f"
+    }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

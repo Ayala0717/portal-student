@@ -5,10 +5,11 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:react/recommended',
     'plugin:unicorn/recommended',
     'plugin:eslint-comments/recommended',
     'plugin:import/recommended',
-    'prettier',
+    'prettier'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
@@ -16,8 +17,10 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': [
       'warn',
-      { allowConstantExport: true },
+      { allowConstantExport: true }
     ],
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
     //import
     'import/order': 'error',
     'import/first': 'error',
@@ -29,9 +32,9 @@ module.exports = {
     //hooks
     'react-hooks/exhaustive-deps': 'off',
     // common
-    'semi': ['error', 'never'],
-    'curly': ['error', 'multi-or-nest', 'consistent'],
-    'quotes': ['error', 'single'],
+    semi: ['error', 'never'],
+    curly: ['error', 'multi-or-nest', 'consistent'],
+    quotes: ['error', 'single'],
     'quote-props': ['error', 'consistent-as-needed'],
     'no-unused-vars': 'off',
     'no-param-reassign': 'off',
@@ -50,7 +53,7 @@ module.exports = {
       'DebuggerStatement',
       'ForInStatement',
       'LabeledStatement',
-      'WithStatement',
+      'WithStatement'
     ],
     'object-curly-spacing': ['error', 'always'],
     // es6
@@ -59,23 +62,23 @@ module.exports = {
       'error',
       {
         destructuring: 'any',
-        ignoreReadBeforeAssign: true,
-      },
+        ignoreReadBeforeAssign: true
+      }
     ],
     'prefer-arrow-callback': [
       'error',
       {
         allowNamedFunctions: false,
-        allowUnboundThis: true,
-      },
+        allowUnboundThis: true
+      }
     ],
     'object-shorthand': [
       'error',
       'always',
       {
         ignoreConstructors: false,
-        avoidQuotes: true,
-      },
+        avoidQuotes: true
+      }
     ],
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
@@ -86,8 +89,8 @@ module.exports = {
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
     'consistent-return': 'off',
-    'complexity': ['off', 11],
-    'eqeqeq': ['error', 'smart'],
+    complexity: ['off', 11],
+    eqeqeq: ['error', 'smart'],
     'no-alert': 'warn',
     'no-case-declarations': 'error',
     'no-multi-spaces': 'error',
@@ -123,10 +126,10 @@ module.exports = {
       {
         cases: {
           kebabCase: true,
-          camelCase: true,
+          camelCase: true
         },
-        ignore: [/\w*.tsx/],
-      },
+        ignore: [/\w*.tsx/]
+      }
     ],
 
     // eslint-comments
@@ -135,7 +138,7 @@ module.exports = {
     'no-useless-constructor': 'off',
     '@typescript-eslint/member-delimiter-style': [
       'error',
-      { multiline: { delimiter: 'none' } },
+      { multiline: { delimiter: 'none' } }
     ],
     '@typescript-eslint/type-annotation-spacing': ['error', {}],
     'no-redeclare': 'off',
@@ -144,15 +147,15 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/explicit-function-return-type': 0,
-    '@typescript-eslint/space-before-function-paren': 0,
+    '@typescript-eslint/space-before-function-paren': 0
   },
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.ts', '.tsx']
     },
     'import/ignore': ['node_modules'],
     'import/resolver': {
-      node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
-    },
-  },
+      node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] }
+    }
+  }
 }

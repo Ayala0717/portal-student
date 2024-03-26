@@ -1,0 +1,15 @@
+*.lock
+dist
+.cache
+build
+public
+src/components.d.ts
+**/node_modules/**
+.env.*
+.eslintignore
+.gitignore
+.lintstagedrc
+.node-version
+.prettierignore
+**/.husky/**
+**/etc/**

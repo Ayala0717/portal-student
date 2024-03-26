@@ -1,6 +1,11 @@
+// .eslintrc.cjs
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: {
+    es6: true,
+    node: true,
+    browser: true
+  },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -14,16 +19,19 @@ module.exports = {
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json'
+    project: './tsconfig.eslint.json',
+    ecmaVersion: 12
   },
   plugins: ['react-refresh'],
   rules: {
+    //react
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true }
     ],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
+    'react/react-in-jsx-scope': 'off',
     //import
     'import/order': 'error',
     'import/first': 'error',
@@ -159,6 +167,9 @@ module.exports = {
     'import/ignore': ['node_modules'],
     'import/resolver': {
       node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] }
+    },
+    react: {
+      version: 'detect'
     }
   }
 }

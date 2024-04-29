@@ -4,6 +4,8 @@ import App from './App.tsx'
 import './index.css'
 // i18n
 import '@/modules/i18n.ts'
+//UnoCSS
+import 'virtual:uno.css'
 
 ReactDOM.createRoot(document.querySelector('#root')!).render(
   <React.StrictMode>

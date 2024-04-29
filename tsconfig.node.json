@@ -8,5 +8,5 @@
     "strict": true
   },
   "extends": "./tsconfig.eslint.json",
-  "include": ["src/**/*.ts", "vite.config.ts"]
+  "include": ["vite.config.ts"]
 }

@@ -20,8 +20,6 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: './tsconfig.eslint.json',
     ecmaVersion: 12
   },
   plugins: ['react-refresh'],
@@ -34,15 +32,6 @@ module.exports = {
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/react-in-jsx-scope': 'off',
-    'react/boolean-prop-naming': [
-      'error',
-      {
-        rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+',
-        message:
-          'It is better if your prop ({{ propName }}) matches this pattern: ({{ pattern }})'
-      }
-    ],
-    'react/require-default-props': ['warn', { functions: 'defaultArguments' }],
     'react/forbid-dom-props': ['error'],
     'react/forbid-elements': ['warn'],
     'react/hook-use-state': ['error'],
@@ -60,15 +49,10 @@ module.exports = {
     'react/no-array-index-key': ['warn'],
     'react/require-optimization': ['error'],
     'react/self-closing-comp': ['warn'],
-    'react/no-object-type-as-default-prop': ['warn'],
     'react/style-prop-object': ['warn'],
     'react/jsx-sort-props': [
       'warn',
       { callbacksLast: true, shorthandFirst: true, reservedFirst: true }
-    ],
-    'react/jsx-closing-bracket-location': [
-      'warn',
-      { selfClosing: 'tag-aligned', nonEmpty: 'after-props' }
     ],
     //import
     'import/order': 'error',

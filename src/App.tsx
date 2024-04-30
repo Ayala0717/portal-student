@@ -9,7 +9,7 @@ function App() {
     <main>
       <section>
         <h1 className='title'>{t('title')}</h1>
-        <Button variant='outline'>{t('close')}</Button>
+        <Button>{t('close')}</Button>
       </section>
     </main>
   )

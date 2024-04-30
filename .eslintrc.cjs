@@ -14,13 +14,13 @@ module.exports = {
     'plugin:unicorn/recommended',
     'plugin:eslint-comments/recommended',
     'plugin:import/recommended',
+    'plugin:unocss/recommended',
     'prettier'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 'latest',
-    ecmaVersion: 12
+    ecmaVersion: 'latest'
   },
   plugins: ['react-refresh'],
   rules: {
@@ -59,9 +59,7 @@ module.exports = {
     'import/first': 'error',
     'import/no-mutable-exports': 'error',
     'import/no-unresolved': 'off',
-    'import/no-unresolved': 'off',
     'no-duplicate-imports': 'warn',
-    'react-refresh/only-export-components': 'warn',
     //hooks
     'react-hooks/exhaustive-deps': 'off',
     // common

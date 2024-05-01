@@ -1,38 +1,31 @@
-import './App.css'
-import { useTranslation } from 'react-i18next'
-import { useEffect, useState } from 'react'
-import { Button } from './components/ui/button'
-import { TextAnimation } from './components/Text/Animation'
+import { useNavigate, useRoutes } from 'react-router'
+import { Suspense, useEffect } from 'react'
+import ErrorPage from './views/error-page'
+import { routes } from '@/routes/index'
+import { useAppDataStore } from '@/stores'
+import ErrorBoundary from '@/components/ErrorBoundary'
 
 function App() {
-  const [loading, setLoading] = useState(true)
-  const { t } = useTranslation()
+  const navigate = useNavigate()
+  const isAuth = useAppDataStore((state) => state.isAuthenticated)
 
   useEffect(() => {
-    const timeOutId = setTimeout(() => {
-      setLoading(false)
-    }, 5000)
+    if (!isAuth) navigate('/login', { replace: true })
+    if (
+      isAuth &&
+      (window.location.pathname === '/' ||
+        window.location.pathname === '/login')
+    )
+      navigate('/home')
+  }, [isAuth])
 
-    return () => clearInterval(timeOutId)
-  }, [])
-
+  const route = useRoutes(routes)
   return (
-    <main>
-      {(Boolean(loading) && (
-        <TextAnimation
-          requireLoader
-          text={'Hola Lorem ipsum'}
-          wrapperClasses='flex-col gap-5'
-        />
-      )) || (
-        <section className='animate-fade-in animate-duration-1s'>
-          <h1 className='hover:(bg-gray-500 font-medium) title'>
-            {t('title')}
-          </h1>
-          <Button>{t('close')}</Button>
-        </section>
-      )}
-    </main>
+    <ErrorBoundary fallBack={<ErrorPage />}>
+      <Suspense fallback={<p>{'Loading'}</p>}>
+        <main>{route}</main>
+      </Suspense>
+    </ErrorBoundary>
   )
 }
 

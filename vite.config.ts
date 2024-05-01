@@ -18,5 +18,15 @@ export default defineConfig({
   ],
   resolve: {
     alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }]
+  },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'clsx',
+      'unocss',
+      'tailwind-merge',
+      'class-variance-authority'
+    ]
   }
 })

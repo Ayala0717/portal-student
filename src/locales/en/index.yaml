@@ -1,2 +1,15 @@
 title: Hello World
+open: Open
 close: Close
+accept: Accept
+send: Send
+errorPage:
+  title: An unexpected error occurred
+  description: Sorry, something went wrong.
+notFoundPage:
+  backToHome: Go to start
+  description: Sorry, the page you are looking for does not exist.
+  title: 404 - Page not found
+loginPage:
+  description: Enter your information to access
+  title: Log in

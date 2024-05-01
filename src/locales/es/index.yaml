@@ -1,2 +1,15 @@
 title: Hola mundo
+open: Abrir
 close: Cerrar
+accept: Aceptar
+send: Envíar
+errorPage:
+  title: Ocurrió un error inesperado
+  description: Lo sentimos, algo salió mal.
+notFoundPage:
+  title: 404 - Página no encontrada
+  description: Lo sentimos, la página que estás buscando no existe.
+  backToHome: Ir al inicio
+loginPage:
+  title: Iniciar Sesión
+  description: Ingresa tu información para acceder

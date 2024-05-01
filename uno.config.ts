@@ -7,7 +7,14 @@ import {
 import { presetShadcn } from './preset.shadcn'
 
 export default defineConfig({
-  presets: [presetUno(), presetIcons(), presetShadcn()],
+  presets: [
+    presetUno(),
+    presetShadcn(),
+    presetIcons({
+      scale: 1.2,
+      cdn: 'https://esm.sh/'
+    })
+  ],
   transformers: [transformerVariantGroup()],
   shortcuts: [
     {

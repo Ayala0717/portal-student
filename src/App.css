@@ -1,3 +1,7 @@
+main {
+  @apply min-h-dvh;
+}
+
 .title {
   @apply text-center my-0 font-bold;
 }

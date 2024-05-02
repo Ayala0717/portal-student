@@ -13,3 +13,8 @@ notFoundPage:
 loginPage:
   description: Enter your information to access
   title: Log in
+  userName: Username
+  password: Password
+validations:
+  maxLength: The field requires a maximum of {{ count }} characters
+  minLength: The field requires a minimum of {{ count }} characters

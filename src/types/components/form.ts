@@ -11,7 +11,7 @@ export interface FormProps<T> {
   labelText?: string
   requireCheck?: boolean
   disabledButton?: boolean
-  onSubmit: <S>(values: S) => Promise<void>
+  onSubmit: (values: T) => void
   onLabelChecked?: (check: boolean) => void
 }
 

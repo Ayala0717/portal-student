@@ -13,3 +13,8 @@ notFoundPage:
 loginPage:
   title: Iniciar Sesión
   description: Ingresa tu información para acceder
+  userName: Nombre de usuario
+  password: Contraseña
+validations:
+  minLength: El campo requiere un mínimo de {{ count }} carácteres
+  maxLength: El campo requiere un máximo de {{ count }} carácteres

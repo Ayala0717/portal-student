@@ -2,11 +2,13 @@ import '@/global/styles/home/main.css'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
 import { TextAnimation } from '@/components/Text/Animation'
-import { Button } from '@/components/ui/button'
+import { useAppDataStore } from '@/stores'
+import { Header } from '@/components/Header'
 
 function Home() {
   const [loading, setLoading] = useState(true)
   const { t } = useTranslation()
+  const userInfo = useAppDataStore((state) => state.user)
 
   useEffect(() => {
     const timeOutId = setTimeout(() => {
@@ -21,17 +23,12 @@ function Home() {
       {(Boolean(loading) && (
         <TextAnimation
           requireLoader
-          text={'Hola Lorem ipsum'}
+          text={t('homePage.welcomeText', {
+            username: userInfo?.username || 'Lore Impsum'
+          })}
           wrapperClasses='flex-col gap-5'
         />
-      )) || (
-        <section className='animate-fade-in animate-duration-1s'>
-          <h1 className='hover:(bg-gray-500 font-medium) title'>
-            {t('title')}
-          </h1>
-          <Button>{t('close')}</Button>
-        </section>
-      )}
+      )) || <Header />}
     </main>
   )
 }

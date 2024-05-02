@@ -1,4 +1,4 @@
-title: Hello World
+title: Acme Inc.
 open: Open
 close: Close
 accept: Accept
@@ -18,3 +18,5 @@ loginPage:
 validations:
   maxLength: The field requires a maximum of {{ count }} characters
   minLength: The field requires a minimum of {{ count }} characters
+homePage:
+  welcomeText: Bienvenido {{ username }}

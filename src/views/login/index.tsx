@@ -68,7 +68,7 @@ function Login() {
         </div>
         <div className='hidden bg-black text-white min-h-dvh md:(flex basis-50% flex-col)'>
           <div className='flex items-center justify-end gap-3 p-8'>
-            <p className='text-xl font-bold'>{'Acme Inc'}</p>
+            <p className='text-xl font-bold'>{t('title')}</p>
             <IconResolver
               iconClass='w-3rem h-3rem'
               iconName='i-tdesign:logo-qq'

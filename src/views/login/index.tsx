@@ -5,10 +5,12 @@ import { UserModel } from '@/types/models/user'
 import { FormFieldsModel } from '@/types/components/form'
 import { IconResolver } from '@/components/Icons/Resolver'
 import { useToast } from '@/components/ui/use-toast'
+import { useAppDataStore } from '@/stores'
 
 function Login() {
   const { toast } = useToast()
   const { t } = useTranslation()
+  const setAuthState = useAppDataStore((state) => state.setAuthState)
 
   const formSchema = z.object({
     username: z
@@ -46,6 +48,8 @@ function Login() {
         </pre>
       )
     })
+
+    setAuthState(true, data)
   }
 
   return (

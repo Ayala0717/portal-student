@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
+import { createJSONStorage, persist } from 'zustand/middleware'
 import { UserModel } from '@/types/models/user'
 
 interface State {
@@ -17,6 +17,6 @@ export const useAppDataStore = create<State>()(
         set({ isAuthenticated, user })
       }
     }),
-    { name: 'appStore' }
+    { name: 'appStore', storage: createJSONStorage(() => sessionStorage) }
   )
 )

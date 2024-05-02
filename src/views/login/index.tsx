@@ -66,7 +66,7 @@ function Login() {
             onSubmit={handleSubmit}
           />
         </div>
-        <div className='hidden flex flex-col bg-black text-white min-h-dvh md:basis-50%'>
+        <div className='hidden bg-black text-white min-h-dvh md:(flex basis-50% flex-col)'>
           <div className='flex items-center justify-end gap-3 p-8'>
             <p className='text-xl font-bold'>{'Acme Inc'}</p>
             <IconResolver

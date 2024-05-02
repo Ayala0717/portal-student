@@ -26,7 +26,10 @@ function Login() {
   const formField: FormFieldsModel<UserModel>[] = [
     {
       fieldName: 'username',
-      label: t('loginPage.userName')
+      label: t('loginPage.userName'),
+      componentProps: {
+        autoFocus: true
+      }
     },
     {
       fieldName: 'password',

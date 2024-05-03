@@ -23,7 +23,7 @@ function TextAnimation(props: Props) {
       {Boolean(props.requireLoader) && (
         <IconResolver
           iconClass='h-5rem w-5rem fadeInOutAnimation'
-          iconName='i-line-md:loading-loop'
+          iconName='i-svg-spinners:blocks-shuffle-2'
         />
       )}
     </section>

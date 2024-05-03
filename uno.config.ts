@@ -16,6 +16,7 @@ export default defineConfig({
     })
   ],
   transformers: [transformerVariantGroup()],
+  rules: [['max-w-content', { 'max-width': 'fit-content' }]],
   shortcuts: [
     {
       'flex-center': 'flex justify-center items-center',

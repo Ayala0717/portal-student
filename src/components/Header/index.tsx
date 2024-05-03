@@ -10,7 +10,7 @@ function Header() {
   const userInfo = useAppDataStore((state) => state.user)
 
   return (
-    <header className='animate-fade-in animate-duration-1s'>
+    <>
       <section className='flex justify-between p-5'>
         <div className='flex items-center justify-center gap-5'>
           <IconResolver
@@ -39,7 +39,7 @@ function Header() {
         </div>
       </section>
       <hr className='min-w-dvw' />
-    </header>
+    </>
   )
 }
 

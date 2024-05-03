@@ -1,0 +1,6 @@
+.right-border {
+  padding: 1rem 2rem 1rem 0;
+  border-right-width: 1px;
+  border-right-color: #e3e9f0;
+  min-height: calc(100dvh - 89px);
+}

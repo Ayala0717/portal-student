@@ -13,16 +13,16 @@ function TextAnimation(props: Props) {
   return (
     <section
       className={cn(
-        'min-h-dvh m-auto flex items-center justify-center',
+        'min-h-dvh w-full m-auto flex items-center justify-center fadeInOutAnimation',
         props.wrapperClasses
       )}
     >
-      <p className={cn('text-5xl fadeInOutAnimation', props.textClasses)}>
+      <p className={cn('text-5xl text-center', props.textClasses)}>
         {props.text}
       </p>
       {Boolean(props.requireLoader) && (
         <IconResolver
-          iconClass='h-5rem w-5rem fadeInOutAnimation'
+          iconClass='h-5rem w-5rem'
           iconName='i-svg-spinners:blocks-shuffle-2'
         />
       )}

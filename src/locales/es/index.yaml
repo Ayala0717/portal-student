@@ -3,6 +3,7 @@ open: Abrir
 close: Cerrar
 accept: Aceptar
 send: Envíar
+loading: Cargando
 errorPage:
   title: Ocurrió un error inesperado
   description: Lo sentimos, algo salió mal.

@@ -3,6 +3,7 @@ open: Open
 close: Close
 accept: Accept
 send: Send
+loading: Loading
 errorPage:
   title: An unexpected error occurred
   description: Sorry, something went wrong.

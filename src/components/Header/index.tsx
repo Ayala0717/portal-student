@@ -11,7 +11,7 @@ function Header() {
 
   return (
     <>
-      <section className='flex justify-between p-5'>
+      <header className='flex animate-fade-in animate-duration-1s justify-between px-5 py-3'>
         <div className='flex items-center justify-center gap-5'>
           <IconResolver
             iconClass='w-3rem h-3rem'
@@ -37,7 +37,7 @@ function Header() {
             </Avatar>
           </div>
         </div>
-      </section>
+      </header>
       <hr className='min-w-dvw' />
     </>
   )

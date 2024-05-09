@@ -20,4 +20,8 @@ validations:
   maxLength: The field requires a maximum of {{ count }} characters
   minLength: The field requires a minimum of {{ count }} characters
 homePage:
-  welcomeText: Bienvenido {{ username }}
+  welcomeText: Welcome {{ username }}
+sideMenu:
+  home: Home
+  calendar: Calendar
+  toggleMenu: Toggle navigation menu

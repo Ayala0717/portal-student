@@ -21,3 +21,7 @@ validations:
   maxLength: El campo requiere un máximo de {{ count }} carácteres
 homePage:
   welcomeText: Bienvenido {{ username }}
+sideMenu:
+  home: Página principal
+  calendar: Calendario
+  toggleMenu: Alternar menu

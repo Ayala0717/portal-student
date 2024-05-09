@@ -1,6 +1,18 @@
+.main-section {
+  min-height: calc(100dvh - 89px);
+  @apply grid min-h-screen w-full md:grid-cols-[220px_1fr];
+}
+
 .right-border {
   padding: 1rem 2rem 1rem 0;
   border-right-width: 1px;
   border-right-color: #e3e9f0;
-  min-height: calc(100dvh - 89px);
+}
+
+.side-menu-item {
+  @apply flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground hover:text-primary;
+}
+
+.side-menu-item__mobile {
+  @apply mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground;
 }
